@@ -1,0 +1,112 @@
+<html>
+
+<head>
+
+    <title>The Love</title></head>
+    <link rel="stylesheet" href="Style.css">
+
+    <body>
+        <div class="hero">
+            <nav>            
+            <img src="Images/logo.png" class="logo">         
+            <img src="Images/moon.png" id="icon">
+
+            </nav>
+
+            <div class="info">
+
+                <h1>Chapter 2: <span><u>The Love</u></span></h1>
+
+                <p>Sharanya wasn't know what to do, and how to react on this situation. She told about this to her uncle.
+                    <br>Sharanya was unkown what is going to happen now. After this her aunt use to beat her a lot and mentally torture
+                    <br>her. Now Sharanya start loathing her aunt. In class 11 she wasn't having Avantika because Sharanya choosed Science
+                    <br>Sharanya performance was going down day to day. Her name was been counted in the failiers. The girl who was always
+                    <br>topper now failing. Teachers were decreasing her confidence by their harsh words. Where is the God now! She just again
+                    <br>at the moment to give up. But one person helped her and make her feel better and that was her English mentor.
+                    <br>Slowly Sharanya start falling for him. Eventually both fall for each other. But No English mentor was just using
+                    <br>her skills. As she was brilliant in the computer. For the online content her English mentor make her realize that he
+                    <br>love her. Sharanya was just keep doing his work so he can be happy. But when Sharanya use to give up she just go to
+                    <br>her English teacher, one day she burst with tears in front of her teacher and he doesn't even try to feel Sharanya better
+                    <br>and even said that she's not strong she is crying so he can't be in relationship anymore. He broke up with her because
+                    <br>corona was over and classes start offline again. Sharanya was already broken, but now one more pain was added in her pocket.
+                    <br>Life taught a lot to Sharanya. She understood one thing that she's born for working for the benefit of the society.
+                                 
+                </p> <h2><span>Ms. Sharanya Mathur</span></h2>
+                <a href="S4.html">Location</a>
+                <a href="Prahlad.html">Go To Main</a>
+                <a href="S2.html">Go Back</a>
+                
+            </div>
+            
+        </div>
+        
+        <div class="img-box">
+            <img src="Images/pattern.png" class="back-img">
+            <a onclick="playsong()" ondblclick="pausesong()">
+            <img src="Images/girl.png" class="main-img"></a>
+
+        </div>
+<script>
+    var mysong = new Audio();
+    mysong.src = 'Bgm.mp3';
+    const playsong = () =>{
+        mysong.play(); 
+    }
+    const pausesong = () => {
+        mysong.pause();
+    }
+</script>
+
+<script>
+
+    var icon = document.getElementById("icon");
+
+    if(localStorage.getItem("theme") == null){
+
+        localStorage.setItem("theme", "light");
+
+    }
+
+   
+
+    /*localStorage.setItem("theme", "light");*/
+
+    let localData = localStorage.getItem("theme");
+
+    if(localData == "light"){
+
+        icon.src = "Images/moon.png";
+
+        document.body.classList.remove("dark-theme");
+
+    }else if(localData == "dark"){
+
+        icon.src = "Images/sun.png";
+
+        document.body.classList.add("dark-theme");
+
+    }
+
+    icon.onclick = function(){
+
+        document.body.classList.toggle("dark-theme");
+
+        if(document.body.classList.contains("dark-theme")){
+
+            icon.src = "Images/sun.png";
+
+            localStorage.setItem("theme", "dark");
+
+        }else{
+
+            icon.src = "Images/moon.png";
+
+            localStorage.setItem("theme","light");
+
+        }
+
+    }
+
+        </script>
+       </body>
+</html>

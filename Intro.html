@@ -1,0 +1,101 @@
+<html>
+
+<head>
+
+    <title>Intro To Sharanya</title></head>
+    <link rel="stylesheet" href="Style.css">
+
+    <body>
+        <div class="hero">
+            <nav>            
+            <img src="Images/logo.png" class="logo">         
+            <img src="Images/moon.png" id="icon">
+
+            </nav>
+
+            <div class="info">
+
+                <h1>Intro To <span>Sharanya</span></h1>
+
+                <p>It was raining heavily, time was around 5:30 AM and suddenly a baby cry spread over hospital. 21 September 2001
+                    <br>Sharanya was born the baby girl with white skin the mesmerizing eyes smile which can make a depresses happy
+                    <br>Everyone understood she's not a normal child she's a daughter of God. Everyone was happy but this happiness
+                    <br>snached the happiness of Sharanya. She was adopted by her uncle, because they can't have baby due to medical
+                    <br>issues. But after then her aunt gave her love, take care of her. Sharanya was growing and understanding things.
+                </p> <h2><span>Ms. Sharanya Mathur</span></h2>
+                <a href="S2.html">Chapter 1</a>
+                
+            </div>
+            
+        </div>
+        
+        <div class="img-box">
+            <img src="Images/pattern.png" class="back-img">
+            <a onclick="playsong()" ondblclick="pausesong()">
+            <img src="Images/girl.png" class="main-img"></a>
+
+        </div>
+<script>
+    var mysong = new Audio();
+    mysong.src = 'Bgm.mp3';
+    const playsong = () =>{
+        mysong.play(); 
+    }
+    const pausesong = () => {
+        mysong.pause();
+    }
+</script>
+
+<script>
+
+    var icon = document.getElementById("icon");
+
+    if(localStorage.getItem("theme") == null){
+
+        localStorage.setItem("theme", "light");
+
+    }
+
+   
+
+    /*localStorage.setItem("theme", "light");*/
+
+    let localData = localStorage.getItem("theme");
+
+    if(localData == "light"){
+
+        icon.src = "Images/moon.png";
+
+        document.body.classList.remove("dark-theme");
+
+    }else if(localData == "dark"){
+
+        icon.src = "Images/sun.png";
+
+        document.body.classList.add("dark-theme");
+
+    }
+
+    icon.onclick = function(){
+
+        document.body.classList.toggle("dark-theme");
+
+        if(document.body.classList.contains("dark-theme")){
+
+            icon.src = "Images/sun.png";
+
+            localStorage.setItem("theme", "dark");
+
+        }else{
+
+            icon.src = "Images/moon.png";
+
+            localStorage.setItem("theme","light");
+
+        }
+
+    }
+
+        </script>
+       </body>
+</html>
